@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hi, I'm <span>Nancy</span><br>From India </h1>
+            </div>
+        </div>
+    </div>
+    <!------------------About----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+               <div class="about-col-1">
+                <img src="image1.jpg" alt="">
+               </div> 
+               <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Nancy, a front-end developer . I have a strong foundation in HTML, CSS, and JavaScript, and I'm proficient in utilizing modern front-end frameworks like [Reactjs]. I'm a team player with a keen eye for detail and a dedication to crafting exceptional user experiences.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-links " onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Frontend Development</span><br>Designing Responsive Websites</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>4-april-24-current</span><br>Frontend developer intern at congnifyz Technologies</li>
+                        <li><span>8/23-9/23</span><br>Web Development intern at Academor</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>MERN Stack Course. </li>
+                        <li><span>2022-2024</span><br>MCA From K.R.Mangalam university.</li>
+                        <li><span>2018-2021</span><br>Bsc from GJU Hisar.</li>
+                    </ul>
+                </div>
+               </div>   
+            </div>
+        </div>
+   </div>
+   <!----Services-------------->
+   <div id="services">
+     <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+        <div>
+            <h2>UI/UX Design </h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet consequuntur reprehenderit eligendi beatae obcaecati at dolorum corporis quisquam rem veritatis!</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <h2>Website Designing </h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet consequuntur reprehenderit eligendi beatae obcaecati at dolorum corporis quisquam rem veritatis!</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <h2>Frontend Development </h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet consequuntur reprehenderit eligendi beatae obcaecati at dolorum corporis quisquam rem veritatis!</p>
+            <a href="#">Learn more</a>
+        </div>
+    </div>
+   </div>
+</div>
+<!-------------portfolio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="weather.jpg" alt="image">
+                <div class="layer">
+                    <h3>Weather App</h3>
+                    <p>A weather is a Digital Application and it designed like that to provide user with detailed information about current and forecasted weather conditions.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image 2.jpg" alt="image">
+                <div class="layer">
+                    <h3>Historical Places in India</h3>
+                    <p>This project will explore a chosen selection of historically significant locations from various times and regions of india.</p>
+                </div>
+            </div>
+         </div>
+         <a href="#" class="btn">See more</a>
+     </div>
+</div>
+<!-----------------contact------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+           <div class="contact-left">
+            <h2 class="sub-title">contact me</h2>
+            <p>Khatternancy65@gmail.com</p>
+            <p>7082620544</p>
+            <a href="My Resume.pdf" download class="btn btn2">Download Resume</a>
+
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="message"  rows="7" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+            </div>
+   </div>
+</div>
+<div class="copyright">
+    <p>copyright @ Nancy.</p>
+</div>
+</div>
+ <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+      
+        function opentab(tabname){
+     for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+    
+</body>
+</html>
